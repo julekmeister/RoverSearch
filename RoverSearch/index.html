@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" class="style.css">
+    <link rel="icon" href="rover.png">
+
+</head>
+
+<body>
+    <header>
+        <h1>Wyszukiwarka zdjęć łazików marsjańskich</h1>
+    </header>
+
+    <main>
+
+        <div class="app-top">
+
+            <div class="search">
+
+                <label for="lazik">Wybierz łazik:</label>
+
+                <select name="lazik" id="lazik" onchange="getOption()">
+                    <option value="curiosity">Curiosity</option>
+                    <option value="opportunity">Opportunity</option>
+                    <option value="spirit">Spirit</option>
+                </select>
+                <button class="manif">Sprawdź manifest łazika</button>
+                <p class="error"></p>
+            </div>
+
+            <table class="detale">
+                <tr class="labelki">
+                    <td>Nazwa łazika</td>
+                    <td>Max sol</td>
+                    <td>Wylądował</td>
+                    <td>Wystartował</td>
+                    <td>Data ost. zdjęcia</td>
+                    <td>Ilość zdjęć</td>
+
+                </tr>
+
+                <tr class="valiusy">
+                    <td class="nazwa"></td>
+                    <td class="max_sol"></td>
+                    <td class="landing"></td>
+                    <td class="launch"></td>
+                    <td class="max_date"></td>
+                    <td class="photos"></td>
+
+                </tr>
+            </table>
+            <p></p>
+            <div class="solsel">
+                <!-- <label for="solnum">Wybierz sol: </label>
+                <input type="number" name="solnum" id="solnum"> -->
+                <label for="start">Wybierz datę:</label>
+                <input type="date" id="date" name="trip-start" value="" min="" max="">
+
+                <button class="solrun">Zobacz zdjęcia</button>
+            </div>
+            <p></p>
+            <div class="camsel">
+                <table class="detale">
+                    <tr class="labelki">
+                        <td>Nazwa kamery</td>
+                        <td>Nazwa skrócona</td>
+                        <td>Sol</td>
+                        <td>Data ziemska</td>
+                        <td>Ilość zdjęć</td>
+                        <td>Kamery </td>
+                    </tr>
+
+                    <tr class="valiusy">
+                        <td class="nazwaK"></td>
+                        <td class="nskr"></td>
+                        <td class="solDate"></td>
+                        <td class="earthDate"></td>
+                        <td class="maxPhotos"></td>
+                        <td class="kamery"></td>
+                    </tr>
+                </table>
+                <!-- <label for="cam">Wybierz kamerę: </label>
+                <select name="cam" id="cam" onchange="getCam()">
+                    <option>Wybierz kamerę</option>
+
+                </select>
+
+                <button class="pics">Pokaż zdjęcia</button> -->
+
+            </div>
+
+
+        </div>
+        <p></p>
+        <divc class="imageArray" id="imageArray">
+
+            <img class="image" id="image" src="" alt="">
+
+            <div>
+
+            </div>
+            <div class="controls" id="controls">
+                <p></p>
+                <button id="previousbtn" onclick="previousImage()">Poprzednie</button>
+                <button id="nextbtn" onclick="nextImage()"> Następne</button>
+            </div>
+            </div>
+            </div>
+
+            <div class="app-bottom">
+
+
+
+
+            </div>
+    </main>
+    <footer>
+        <p>Projekt WSB 2022 - Zaawansowane technologie internetowe</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
